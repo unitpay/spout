@@ -113,6 +113,7 @@ EOD;
         $worksheet->setFilePointer($sheetFilePointer);
 
         fwrite($sheetFilePointer, self::SHEET_XML_FILE_HEADER);
+        fwrite($sheetFilePointer, '<cols><col min="2" max="10" width="25" customWidth="1"/></cols>');
         fwrite($sheetFilePointer, '<sheetData>');
     }
 
